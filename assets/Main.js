@@ -59,3 +59,5 @@ function scrolling(event) {
   percent.innerHTML = `${((100 * scrollAmout) / availableScroll).toFixed(0)}%`;
   return scrollAmout;
 }
+
+console.log("pophkfdhsj");
