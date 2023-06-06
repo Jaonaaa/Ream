@@ -1,0 +1,129 @@
+@use 'Header'
+
+html
+    -webkit-tap-highlight-color: transparent
+    -webkit-text-size-adjust: none
+    -webkit-font-smoothing: antialiased
+
+body
+    padding: 0
+    margin: 0
+    height: 200vh
+    scroll-behavior: smooth
+    // &::-webkit-scrollbar
+    //     display: none
+
+#loader-page
+    position: fixed
+    background: rgb(0, 0, 0)
+    height: 100vh
+    width: 100%
+    top: 0
+    left: 0
+    overflow-y: hidden
+    overflow-x: hidden
+    box-sizing: border-box
+    // pointer-events: none
+    perspective: 1000px
+    perspective-origin: center
+    &::-webkit-scrollbar
+        display: none
+    .middle-line
+        position: absolute
+        left: 50%
+        top: 45%
+        transform: translate(-50%,-50%)
+        display: flex
+        align-items: center
+        justify-content: center
+
+        box-sizing: border-box
+        height: fit-content
+        align-self: center
+        user-select: none
+        .name-site
+            font-size: 5.5rem
+            background-clip: text
+            background: linear-gradient(to right,rgba(107, 104, 104, 0.142) 100%, rgba(16, 15, 15, 0.263) 10%)
+            background-position: left
+            -webkit-background-clip: text
+            color: transparent
+            -webkit-text-fill-color: transparent
+            position: relative
+            letter-spacing: 20px
+            // -webkit-text-stroke: 1px #71707086
+            font-family: Felix Titling
+            text-align: center
+            // color: white
+            height: fit-content
+            width: fit-content
+            transform-style: preserve-3d
+            //cubic-bezier(.18,.83,.75,1.88)
+            transition: all 0.4s ease-out
+            &::before
+                content: attr(data-name)
+                color: rgb(255,255 ,255 )
+                -webkit-text-fill-color: rgb(255,255 ,255 )
+                width: 100%
+                overflow: hidden
+                z-index: 2
+                position: absolute
+                left: 0
+                top: 0
+                animation: textAppear 5s forwards
+            &:hover
+                // transform: translateY(-100%)
+            .logo-site
+                position: absolute
+                right: -15%
+                bottom: -0%
+                animation: scaleUp 10s forwards
+                animation-delay: 3.8s
+                transform: scale(0)
+                svg
+                    width: 2.5rem
+.txt-container
+    width: 100vw
+    display: flex
+    justify-content: center
+    height: fit-content
+    overflow: hidden
+    perspective: 1000px
+    perspective-origin: center
+    // &:hover
+    //     .name-site
+    //         opacity: 0
+    //         transform: translateY(-100%)
+.text-slide-down
+    color: rgb(255,255 ,255 )
+    width: 20rem
+    transform: translateY(40%)
+    opacity: 0
+    font-family: Poppins
+    transition: all 0.5s ease-out
+    margin-bottom: 1rem
+
+@keyframes textAppear
+    from
+        width: 0
+    to
+        width: 100%
+@keyframes scaleUp
+    0%
+        transform: scale(0)
+    3%
+        transform: scale(1.2)
+    6%
+        transform: scale(1)
+    100%
+        transform: scale(1)
+
+#percent
+    font-size: 5rem
+    color: rgb(255,255 ,255)
+    position: fixed
+    left: 50%
+    top: 50%
+    z-index: 3
+    font-family: Poppins
+    transform: translateX(-50%) translateY(-50%)

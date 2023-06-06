@@ -1,0 +1,191 @@
+#header {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  color: rgb(255, 255, 255);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  transform: translateY(-100%);
+  box-sizing: border-box;
+  padding: 1.5rem 5vw 1rem 2.3rem;
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  justify-content: space-between;
+}
+#header .logo-site {
+  letter-spacing: 7px;
+  font-family: Felix Titling;
+  font-size: 1.65rem;
+}
+#header .links-params {
+  display: flex;
+  font-family: Poppins;
+  flex-direction: column;
+  position: relative;
+}
+#header .links-params .row-links {
+  display: flex;
+}
+#header .links-params .row-links .block-link {
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin: 0 2rem 0 0;
+  transition: all 0.11s ease-in-out;
+}
+#header .links-params .row-links .block-link:hover {
+  color: rgb(83, 79, 207);
+}
+#header .links-params .slider-link {
+  height: 2.4px;
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: -0.26rem;
+  margin-top: 0.12rem;
+  border-radius: 0.4rem;
+  background: rgb(255, 255, 255);
+  transition: all 0.18s ease-out;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 200vh;
+  scroll-behavior: smooth;
+}
+
+#loader-page {
+  position: fixed;
+  background: rgb(0, 0, 0);
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  perspective: 1000px;
+  perspective-origin: center;
+}
+#loader-page::-webkit-scrollbar {
+  display: none;
+}
+#loader-page .middle-line {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-self: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#loader-page .middle-line .name-site {
+  font-size: 5.5rem;
+  background-clip: text;
+  background: linear-gradient(to right, rgba(107, 104, 104, 0.142) 100%, rgba(16, 15, 15, 0.263) 10%);
+  background-position: left;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  letter-spacing: 20px;
+  font-family: Felix Titling;
+  text-align: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transform-style: preserve-3d;
+  transition: all 0.4s ease-out;
+}
+#loader-page .middle-line .name-site::before {
+  content: attr(data-name);
+  color: rgb(255, 255, 255);
+  -webkit-text-fill-color: rgb(255, 255, 255);
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: textAppear 5s forwards;
+}
+#loader-page .middle-line .name-site .logo-site {
+  position: absolute;
+  right: -15%;
+  bottom: 0%;
+  animation: scaleUp 10s forwards;
+  animation-delay: 3.8s;
+  transform: scale(0);
+}
+#loader-page .middle-line .name-site .logo-site svg {
+  width: 2.5rem;
+}
+
+.txt-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+  perspective: 1000px;
+  perspective-origin: center;
+}
+
+.text-slide-down {
+  color: rgb(255, 255, 255);
+  width: 20rem;
+  transform: translateY(40%);
+  opacity: 0;
+  font-family: Poppins;
+  transition: all 0.5s ease-out;
+  margin-bottom: 1rem;
+}
+
+@keyframes textAppear {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes scaleUp {
+  0% {
+    transform: scale(0);
+  }
+  3% {
+    transform: scale(1.2);
+  }
+  6% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+#percent {
+  font-size: 5rem;
+  color: rgb(255, 255, 255);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  font-family: Poppins;
+  transform: translateX(-50%) translateY(-50%);
+}/*# sourceMappingURL=index.css.map */

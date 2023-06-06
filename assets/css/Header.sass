@@ -1,0 +1,47 @@
+
+$blanc: rgb(255,255,255)
+$blue: rgb(83, 79, 207)
+
+#header
+    position: fixed
+    top: 0
+    z-index: 3
+    color: $blanc
+    opacity: 0
+    transition: all 0.4s ease-in-out
+    transform: translateY(-100%)
+    box-sizing: border-box
+    padding: 1.5rem 5vw 1rem 2.3rem
+    display: flex
+    align-items: baseline
+    width: 100%
+    justify-content: space-between
+    .logo-site
+        letter-spacing: 7px
+            // -webkit-text-stroke: 1px #71707086
+        font-family: Felix Titling
+        font-size: 1.65rem
+    .links-params
+        display: flex
+        font-family: Poppins
+        flex-direction: column
+        position: relative
+        .row-links
+            display: flex
+            .block-link
+                font-size: 1.1rem
+                cursor: pointer
+                margin: 0 2rem 0 0
+                transition: all 0.11s ease-in-out
+                &:hover
+                    color: $blue
+        .slider-link
+            height: 2.4px
+            width: 0
+            position: absolute
+            left: 0
+            bottom: -0.26rem
+            margin-top: 0.12rem
+            border-radius: 0.4rem
+            background: $blanc
+            transition: all 0.18s ease-out
